@@ -48,3 +48,28 @@ const movies = [
     }
 ];
 
+const moviesContainer = document.querySelector("#movies-container");
+
+function displayMovies(movieList) {
+    moviesContainer.innerHTML = "";
+
+    movieList.forEach((movie) => {
+        moviesContainer.innerHTML += `
+        <article>
+            <h2>${movie.titel}</h2>
+
+            <ul>
+                <li>${movie.genre}</li>
+                <li>${movie.year}</li>
+                <li>${movie.duration}</li>
+            </ul>
+
+            <figure>
+                <img src="${movie.img}" alt="${movie.titel}">
+            </figure>
+        </article>
+        `;
+    });
+}
+
+displayMovies(movies);
