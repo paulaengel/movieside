@@ -45,7 +45,53 @@ const movies = [
         duration: "2.15",
         img: "img/it.webp",
         url: "https://www.imdb.com/title/tt1396484/"
+    },
+    {
+        id: "6",
+        titel: "The Hangover",
+        genre: "comedy",
+        year: 2009,
+        duration: "1.4",
+        img: "img/the-hangover.webp",
+        url: "https://www.imdb.com/title/tt1119646/"
+    },
+    {
+        id: "7",
+        titel: "The Conjuring",
+        genre: "horror",
+        year: 2013,
+        duration: "1.52",
+        img: "img/the-conjuring.webp",
+        url: "https://www.imdb.com/title/tt1457767/"
+    },
+    {
+        id: "8",
+        titel: "Interstellar",
+        genre: "science-fiction",
+        year: 2014,
+        duration: "2.55",
+        img: "img/interstellar.jpg",
+        url: "https://www.imdb.com/title/tt0816692/"
+    },
+    {
+        id: "9",
+        titel: "The Matrix",
+        genre: "science-fiction",
+        year: 1999,
+        duration: "3.02",
+        img: "img/the-matrix.webp",
+        url: "https://www.imdb.com/title/tt0133093/"
+    },
+    {
+        id: "10",
+        titel: "Pulp Fiction",
+        genre: "drama",
+        year: 1994,
+        duration: "1.39",
+        img: "img/pulp-fiction.webp",
+        url: "https://www.imdb.com/title/tt0110912/"
     }
+
 ];
 
 const moviesContainer = document.querySelector("#movies-container");
@@ -65,7 +111,10 @@ function displayMovies(movieList) {
             </ul>
 
             <figure>
-                <img src="${movie.img}" alt="${movie.titel}">
+                <a href="${movie.url}" target="_blank" rel="noopener noreferrer">
+                    <img src="${movie.img}" alt="${movie.titel}">
+                </a>
+                <figcaption>${movie.titel}</figcaption>
             </figure>
         </article>
         `;

@@ -8,4 +8,43 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family:"Sekuya", system-ui;
+    font-size: 70px;
+
+}
+
+h2 {
+    font-family:"Sekuya", system-ui;
+    font-size: 15px;
+}
+
+article {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 250px;
+}
+
+article img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
