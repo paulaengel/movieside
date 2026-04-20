@@ -123,6 +123,13 @@ function displayMovies(movieList) {
    
 }
 
+function filterMovies() {
+    const selectedValue = selectedCategory.value;
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    
+
+}
+
 displayMovies(movies);
 
     
