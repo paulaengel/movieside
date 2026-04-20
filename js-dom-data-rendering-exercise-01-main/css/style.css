@@ -20,11 +20,9 @@ form {
     justify-content: center;
     align-items: center;
     gap: 12px;
-
     padding: 20px;
     margin: 20px auto;
     max-width: 900px;
-
     background: #121a33;
     border: 1px solid #22305a;
 }
@@ -56,7 +54,8 @@ input[type="submit"] {
     border: none;
     background: #4b6fff;
     color: white;
-   
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
 input[type="submit"]:hover {
@@ -68,6 +67,7 @@ input[type="submit"]:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+
     padding: 20px;
 }
 
@@ -86,8 +86,9 @@ article:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
+
 article h2 {
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
     color: #9bb7ff;
     font-family: "Sekuya", system-ui;
@@ -96,7 +97,7 @@ article h2 {
 article ul {
     list-style: none;
     padding: 0 10px;
-    font-size: 0.9rem;
+    font-size: 13px;
     color: #c9d4ff;
 }
 
