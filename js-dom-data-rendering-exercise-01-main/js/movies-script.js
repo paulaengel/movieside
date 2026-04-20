@@ -93,6 +93,9 @@ const movies = [
     }
 
 ];
+const selectedCategory = document.querySelector("#category-select");
+const searchInput = document.querySelector("#gsearch");
+const form = document.querySelector("form");
 
 const moviesContainer = document.querySelector("#movies-container");
 
@@ -140,10 +143,19 @@ function filterMovies() {
           return movie.titel.toLowerCase().includes(searchTerm);
         });
       }
-      
-
+    
+        displayMovies(filteredMovies);
 }
 
 displayMovies(movies);
 
-    
+selectedCategory.addEventListener("change", filterMovies);
+
+searchInput.addEventListener("input", filterMovies);
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  filterMovies();
+});
+
+
