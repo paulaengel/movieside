@@ -135,6 +135,13 @@ function filterMovies() {
       });
     }
 
+    if (searchTerm !== "") {
+        filteredMovies = filteredMovies.filter((movie) => {
+          return movie.titel.toLowerCase().includes(searchTerm);
+        });
+      }
+      
+
 }
 
 displayMovies(movies);
