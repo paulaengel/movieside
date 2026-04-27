@@ -159,3 +159,75 @@ form.addEventListener("submit", (event) => {
 });
 
 
+function displayMovies(movieList) {
+
+    let favoriteIds = JSON.parse(localStorage.getItem("favoriteMovies")) || [];
+
+    const html = movieList.map((movie) => {
+
+        const isFavorite = favoriteIds.includes(movie.id);
+
+        return `
+        <article>
+            <h2>${movie.titel}</h2>
+
+            <ul>
+                <li>${movie.genre}</li>
+                <li>${movie.year}</li>
+                <li>${movie.duration}</li>
+            </ul>
+
+            <figure>
+                <a href="${movie.url}" target="_blank">
+                    <img src="${movie.img}" alt="${movie.titel}">
+                </a>
+                <figcaption>${movie.titel}</figcaption>
+            </figure>
+
+            <button class="favorite-btn" data-id="${movie.id}">
+                ${isFavorite ? "★ Fjern favorit" : "☆ Tilføj favorit"}
+            </button>
+
+        </article>
+        `;
+    }).join("");
+
+    moviesContainer.innerHTML = html;
+
+    addFavoriteEvents();
+}
+
+function addFavoriteEvents(){
+
+    const buttons = document.querySelectorAll(".favorite-btn");
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", function(){
+
+            let favoriteIds = JSON.parse(
+                localStorage.getItem("favoriteMovies")
+            ) || [];
+
+            const movieId = this.dataset.id;
+
+            if(favoriteIds.includes(movieId)){
+
+                favoriteIds = favoriteIds.filter(id => id !== movieId);
+
+            } else {
+
+                favoriteIds.push(movieId);
+            }
+
+            localStorage.setItem(
+                "favoriteMovies",
+                JSON.stringify(favoriteIds)
+            );
+
+            displayMovies(movies);
+        });
+
+    });
+
+}

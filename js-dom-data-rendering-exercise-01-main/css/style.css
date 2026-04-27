@@ -114,3 +114,110 @@ figcaption {
     font-size: 15px;
     color: #8fa3ff;
 }
+
+h2 a{
+    text-decoration:none;
+    color:#9bb7ff;
+    display:block;
+    text-align:center;
+    margin-bottom:30px;
+    font-family:"Sekuya", system-ui;
+    transition:0.3s ease;
+    }
+    
+    h2 a:hover{
+    color:#c3d1ff;
+    }
+    
+    
+    #favorites-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+    }
+    
+    
+    /* tom favorit besked */
+    #favorites-container p{
+    background:#121a33;
+    border:1px solid #22305a;
+    padding:30px;
+    border-radius:12px;
+    font-size:18px;
+    color:#c9d4ff;
+    text-align:center;
+    }
+    
+    
+    /* favorit cards bruger samme movie styling */
+    #favorites-container article{
+    width:250px;
+    background:#121a33;
+    border:1px solid #22305a;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.3s ease;
+    }
+    
+    #favorites-container article:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.4);
+    }
+    
+    #favorites-container h2{
+    font-size:18px;
+    padding:10px;
+    color:#9bb7ff;
+    font-family:"Sekuya", system-ui;
+    }
+    
+    #favorites-container ul{
+    list-style:none;
+    padding:0 10px;
+    font-size:13px;
+    color:#c9d4ff;
+    }
+    
+    #favorites-container img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+    }
+    
+    #favorites-container figcaption{
+    text-align:center;
+    padding:8px;
+    font-size:15px;
+    color:#8fa3ff;
+    }
+
+    .back-link{
+        background:#9bb7ff;
+        padding:10px 10px;
+        border-radius:8px;
+        display:inline-block;
+        text-align:center;
+        margin-left: 50px;
+
+        }
+        
+        .favorite-btn{
+            display:block;
+            margin:15px auto 20px auto;
+            padding:10px 18px;
+            background:#4b6fff;
+            border:none;
+            border-radius:8px;
+            color:white;
+            font-family:"Oswald", sans-serif;
+            cursor:pointer;
+            transition:0.3s ease;
+            }
+            
+            .favorite-btn:hover{
+            background:#6d8cff;
+            transform:scale(1.05);
+            }
